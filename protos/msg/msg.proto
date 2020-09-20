@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package TLogin;
+
+//请求注册接口
+message ReqRegister {
+    string account = 1;		// 用户账号
+    string password = 2;	// 用户密码
+}
+
+//回应注册接口
+message AckRegister {
+    uint32 code = 1; 		// 错误码
+    string msg = 2;		    // 消息
+    string token = 3;       // 登录token
+}
+
+//请求登录接口
+message ReqLogin {
+    string account = 1;		// 用户账号
+    string password = 2;	// 用户密码
+}
+
+//回应登录接口
+message AckLogin {
+    uint32 code = 1; 		// 错误码
+    uint32 uid = 2;         // 用户ID
+    string msg = 3;		    // 消息
+    string token = 4;       // 登录token
+}
+
+//错误消息
+message KickMsg {
+    uint32 code = 1; 		// 错误码
+    string msg = 3;		    // 消息
+}
+
+//错误消息
+message ErrorMsg {
+    uint32 code = 1; 		// 错误码
+    string msg = 3;		    // 消息
+}
