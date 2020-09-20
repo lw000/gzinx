@@ -2,7 +2,7 @@ package main
 
 import (
 	"demo/gzinx/gate/connmgr"
-	"demo/gzinx/gate/proxy"
+	"demo/gzinx/proxy"
 	"errors"
 	"fmt"
 	"github.com/aceld/zinx/znet"
