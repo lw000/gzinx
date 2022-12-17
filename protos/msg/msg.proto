@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package TLogin;
 
+option go_package = "../gen;xxx";
+
 //请求注册接口
 message ReqRegister {
     string account = 1;		// 用户账号
