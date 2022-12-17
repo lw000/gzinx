@@ -2,6 +2,7 @@ package main
 
 import (
 	"demo/gzinx/consts"
+	"demo/gzinx/login/cross_platform"
 	TLogin "demo/gzinx/protos/msg"
 	"github.com/aceld/zinx/ziface"
 	"github.com/aceld/zinx/znet"
@@ -44,6 +45,8 @@ func (p *LoginRouter) Handle(request ziface.IRequest) {
 }
 
 func main() {
+	cross_platform.DataInit()
+	
 	s := znet.NewServer()
 	s.AddRouter(consts.LoginServeCommandRegister, &LoginRouter{})
 	s.Serve()
